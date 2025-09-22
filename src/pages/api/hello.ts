@@ -17,9 +17,6 @@ async function writeExample() {
 writeExample();
 
 
-
-
-
 export const GET: APIRoute = () => {
   return new Response(
     JSON.stringify({

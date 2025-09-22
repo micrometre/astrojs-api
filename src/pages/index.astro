@@ -1,11 +1,15 @@
 ---
-import { GET } from './api/hello.ts'
+import { GET } from "./api/hello.ts";
+
+import FeedbackForm from "../components/FeedbackForm";
 
 
+import SalesEntry from '../components/SalesEntry';
 
-let response = await GET(Astro)
-const data = await response.json()
-console.log(data)
+
+let response = await GET(Astro);
+const data = await response.json();
+console.log(data);
 ---
 
 <html lang="en">
@@ -18,7 +22,7 @@ console.log(data)
 	</head>
 	<body>
 		<h1>Astro</h1>
-		<h1>{data.greeting} world!</h1>
-
+		<FeedbackForm client:load />
+		<SalesEntry client:load />
 	</body>
 </html>
